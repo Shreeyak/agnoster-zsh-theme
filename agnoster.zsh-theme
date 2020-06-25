@@ -40,6 +40,7 @@ CURRENT_BG='NONE'
 if [[ -z "$PRIMARY_FG" ]]; then
 	PRIMARY_FG=black
 fi
+CURRENT_DIR_TEXT=white
 
 # Characters
 SEGMENT_SEPARATOR="\ue0b0"
@@ -116,7 +117,7 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue $PRIMARY_FG ' %~ '
+  prompt_segment blue $CURRENT_DIR_TEXT ' %~ '
 }
 
 # Status:
